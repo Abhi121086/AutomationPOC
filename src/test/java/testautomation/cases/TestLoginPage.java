@@ -24,7 +24,7 @@ public class TestLoginPage extends Base {
         log.info("In Login application test");
         objLoginPage = new LoginPage(driver);
         String strLoginPageTitle = objLoginPage.getTitle();
-        Assert.assertEquals(strLoginPageTitle,"iBridg");
+        Assert.assertEquals(strLoginPageTitle,getPropertyValue("ORProperty","Title"));
         objLoginPage.loginToiBridgeApplication("infxs01","manager#17");
     }
     @AfterTest
